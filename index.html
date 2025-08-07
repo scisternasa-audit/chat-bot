@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +6,7 @@
     <title>Chatbot de Auditoría</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js"></script>
     <style>
         html, body {
             margin: 0;
@@ -22,11 +24,9 @@
 </head>
 <body>
     <div id="n8n-chat-container"></div>
-    <script type="module">
-        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-        
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
-            createChat({
+            n8n.createChat({
                 webhookUrl: "https://agent-auditus.app.n8n.cloud/webhook/6d33eff0-647c-4185-af72-762cc81f6e1d/chat",
                 containerElement: document.getElementById('n8n-chat-container')
             });
