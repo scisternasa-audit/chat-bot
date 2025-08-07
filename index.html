@@ -1,35 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Chatbot de Auditoría</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" />
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            font-family: sans-serif;
+<script>
+    window.ChatWidgetConfig = {
+        webhook: {
+            url: 'https://agent-auditus.app.n8n.cloud/webhook/6d33eff0-647c-4185-af72-762cc81f6e1d/chat',
+            route: 'general'
+        },
+        branding: {
+            logo: '',
+            name: 'Auditoría', 
+            welcomeText: 'Hola, ¿cómo puedo ayudarte?',
+            responseTimeText: 'Respondemos rápidamente'
+        },
+        style: {
+            primaryColor: '#854fff',
+            secondaryColor: '#6b3fd4',
+            position: 'right',
+            backgroundColor: '#ffffff',
+            fontColor: '#333333'
         }
-        #n8n-chat-container {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-</head>
-<body>
-    <div id="n8n-chat-container"></div>
-    <script src="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            n8n.createChat({
-                webhookUrl: "https://agent-auditus.app.n8n.cloud/webhook/6d33eff0-647c-4185-af72-762cc81f6e1d/chat",
-                containerElement: document.getElementById('n8n-chat-container')
-            });
-        });
-    </script>
-</body>
-</html>
+    };
+</script>
+<script src="https://nocodeveloper.com/chat.js"></script>
